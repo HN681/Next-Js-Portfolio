@@ -1,6 +1,6 @@
 // index.js
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import ScrollTrigger from '../components/ScrollTrigger';
 import SpecialistSection from '../components/SpecialistSection';
 import ProjectSection from '../components/Project';
 import SectionWithCards from '../components/SectionWithCards';
@@ -11,7 +11,7 @@ import SectionWithCards from '../components/SectionWithCards';
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      <ScrollTrigger />
       <SpecialistSection />
       <ProjectSection/>
       <SectionWithCards />

@@ -11,6 +11,10 @@ const Navbar = () => {
     setDarkMode(!darkMode);
   };
 
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -26,9 +30,9 @@ const Navbar = () => {
     top: '100%',
     left: '0',
     width: '100%',
-    backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.6)' : 'white', // Customize as needed
-    color: darkMode ? 'white' : 'black', // Customize text color
-    zIndex: '999', // Ensure it's above other content
+    backgroundColor: darkMode ? 'rgba(0, 0, 0, 0.6)' : 'white',
+    color: darkMode ? 'white' : 'black',
+    zIndex: '999',
     transition: 'all 0.3s ease-in-out',
   };
 
@@ -39,7 +43,9 @@ const Navbar = () => {
         style={navbarStyle}
       >
         <Link href="/">
-          <a className="text-white text-xl font-bold">Huzaifa</a>
+          <a className="text-white text-xl font-bold" onClick={closeMobileMenu}>
+            Huzaifa
+          </a>
         </Link>
         <div className="flex space-x-4 items-center">
           <button
@@ -48,24 +54,32 @@ const Navbar = () => {
           >
             {darkMode ? <FiSun /> : <FiMoon />}
           </button>
-          <button onClick={toggleMobileMenu} className="text-white md:hidden">
-            <FiMenu />
-          </button>
+          <button onClick={toggleMobileMenu} className="text-white">
+  <FiMenu />
+</button>
         </div>
       </nav>
 
       <div style={mobileMenuStyle}>
         <Link href="/">
-          <a className="block p-4">Home</a>
+          <a className="block p-4" onClick={closeMobileMenu}>
+            Home
+          </a>
         </Link>
         <Link href="/about">
-          <a className="block p-4">About</a>
+          <a className="block p-4" onClick={closeMobileMenu}>
+            About
+          </a>
         </Link>
         <Link href="/services">
-          <a className="block p-4">Services</a>
+          <a className="block p-4" onClick={closeMobileMenu}>
+            Services
+          </a>
         </Link>
         <Link href="/contact">
-          <a className="block p-4">Contact</a>
+          <a className="block p-4" onClick={closeMobileMenu}>
+            Contact
+          </a>
         </Link>
       </div>
     </div>
@@ -73,3 +87,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+  
