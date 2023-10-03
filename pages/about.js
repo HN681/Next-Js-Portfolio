@@ -8,14 +8,14 @@ const AboutUs = () => {
       <div className="max-w-3xl mx-auto bg-white shadow-md p-6 rounded-lg">
         <div className="flex flex-col items-center">
           <img
-            src="/profile.jpg" // Replace with your photo in the root directory
+            src="/profile.jpg"
             alt="Muhammad Huzaifa Hassan"
             className="w-32 h-32 rounded-full mb-4"
           />
           <h1 className="text-3xl font-semibold mb-2">Muhammad Huzaifa Hassan</h1>
           <p className="text-gray-500">Passionate Frontend Developer</p>
         </div>
-        
+
         <h2 className="text-xl font-semibold mt-6 mb-4">Professional Bio</h2>
         <p className="text-gray-700 mb-4">
           Hello, I'm Muhammad Huzaifa Hassan, a dedicated Frontend Developer with a strong commitment to creating exceptional web experiences. My journey in the world of web development began during my college days, and since then, I've been on a mission to craft user-friendly and visually appealing websites.
@@ -43,7 +43,7 @@ const AboutUs = () => {
         </ul>
 
         <h2 className="text-xl font-semibold mt-4 mb-2">Timeline</h2>
-        
+
         {/* Vertical Timeline */}
         <VerticalTimeline>
           {/* Your Certificate */}
@@ -70,7 +70,7 @@ const AboutUs = () => {
 
           {/* Add more VerticalTimelineElement components for each milestone */}
         </VerticalTimeline>
-        
+
         <p className="text-gray-700">
           Feel free to connect with me at [Your Email] or check out my portfolio at [Your Portfolio URL].
         </p>
@@ -80,4 +80,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
- 
